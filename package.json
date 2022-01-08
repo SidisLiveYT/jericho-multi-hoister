@@ -1,0 +1,85 @@
+{
+  "name": "jericho-multi-hoister",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "module": "./src/index.mjs",
+  "types": "./typings/index.d.ts",
+  "files": [
+    "src",
+    "typings"
+  ],
+  "exports": {
+    "./*": "./*",
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.mjs"
+    }
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release --branches main",
+    "commit:push": "git add . && npm run commit && git push",
+    "docs": "jsdoc node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.7",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jsdoc": "^3.6.7",
+    "jsdoc-babel": "^0.5.0",
+    "jsdoc-skyceil": "^2.0.0",
+    "nyc": "^15.1.0",
+    "semantic-release": "^18.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">= 16.6.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^13.5.1",
+    "is-url": "^1.2.4"
+  },
+  "author": "Sid is Live YT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SidisLiveYT/jericho-multi-hoister.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SidisLiveYT/jericho-multi-hoister/issues"
+  },
+  "homepage": "https://jericho-multi-hoister.js.org",
+  "keywords": [
+    "jericho-player",
+    "music-player",
+    "youtube",
+    "discord-music-player",
+    "spotify",
+    "soundcloud",
+    "facebook",
+    "player-framework",
+    "player",
+    "youtube-dl",
+    "play-dl",
+    "music-framework",
+    "discord bots",
+    "distube",
+    "youtube-player",
+    "ytdl",
+    "ytdl-player",
+    "youtube-framework",
+    "discord-music-player",
+    "discord-player"
+  ]
+}
